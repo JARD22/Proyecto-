@@ -1,0 +1,45 @@
+���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.exe.config
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.exe
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.pdb
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.xml
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbprojAssemblyReference.cache
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.InicioSesion.resources
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Resources.resources
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.RegistroUsuario.resources
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbproj.GenerateResource.cache
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbproj.CoreCompileInputs.cache
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.exe
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.xml
+E:\Lenguaje 4\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.pdb
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.exe.config
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.exe
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.pdb
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.xml
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbprojAssemblyReference.cache
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.InicioSesion.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Resources.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.RegistroUsuario.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbproj.GenerateResource.cache
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbproj.CoreCompileInputs.cache
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.exe
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.xml
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.pdb
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Main.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.exe.config
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.exe
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.pdb
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.xml
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbprojAssemblyReference.cache
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.InicioSesion.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Main.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Resources.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.RegistroUsuario.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbproj.GenerateResource.cache
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.vbproj.CoreCompileInputs.cache
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.exe
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.xml
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos Humanos.pdb
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Asignacion_Roles.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Crea_Modifica_Rol.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Activacion_Usuario.resources
