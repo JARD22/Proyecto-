@@ -15,7 +15,7 @@
         Dim intentosblanco As Integer = 0
 
 
-        Dim Query As New SqlClient.SqlCommand("SELECT Usuario, Contraseña, Estado FROM USUARIOS WHERE Usuario= '" & Txt_Usuario.Text & "'", varconexion)
+        Dim Query As New SqlClient.SqlCommand("SELECT Usuario, Contraseña, Estado FROM USUARIOS WHERE Usuario= '" & Txt_Usuario.Text & "'", Conexion_BD.conn)
         Dim dr As SqlClient.SqlDataReader
 
 
@@ -27,7 +27,7 @@
 
 
             Try
-                varconexion.Open()
+                Conexion_BD.Open()
                 dr = Query.ExecuteReader
                 While dr.Read()
 
@@ -35,7 +35,7 @@
                     Pass = dr.GetString(1)
                     Estado = dr.GetString(2)
                 End While
-                varconexion.Close()
+                Conexion_BD.Close()
 
             Catch Ex As Exception
                 MessageBox.Show(Ex.Message)
@@ -73,7 +73,7 @@
 
         If numero_intentos = 3 Then
             Try
-                varconexion.Open()
+                Conexion_BD.Open()
                 Update = New SqlClient.SqlCommand("  UPDATE  USUARIOS SET Estado = 'Desactivad' WHERE Usuario ='" + Usuario + "'", varconexion)
                 Update.ExecuteNonQuery()
 
@@ -83,7 +83,7 @@
             Catch ex As Exception
                 MsgBox(ex.Message)
 
-                varconexion.Close()
+                Conexion_BD.Close()
             End Try
 
         End If
@@ -96,6 +96,8 @@
     End Sub
 
     Private Sub InicioSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Conexion_BD.conectar("JORGEAGUILERA", "RRHH")
 
     End Sub
 End Class

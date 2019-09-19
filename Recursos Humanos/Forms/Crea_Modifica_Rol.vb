@@ -4,11 +4,11 @@ Imports System.IO
 
 Public Class Crea_Modifica_Rol
 
-    Public Empleados As New DataTable
-    Public DA As New SqlDataAdapter("SELECT_ROLES", varconexion)
-    Public nuevousuario As New SqlClient.SqlCommand
-    Private Sub RegistroUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub RegistroUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim Empleados As New DataTable
+        Dim DA As New SqlDataAdapter("SELECT_ROLES", varconexion)
+        Dim nuevousuario As New SqlClient.SqlCommand
         Me.DGV_ROLES.Rows.Clear()
 
         Try

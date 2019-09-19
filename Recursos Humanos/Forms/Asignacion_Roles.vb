@@ -25,19 +25,6 @@ Public Class Asignacion_Roles
 
 
 
-        'CARGANDO LOS ROLES DISPONIBLES'
-        Dim ROLES As New DataTable
-        Dim DA_Roles As New SqlDataAdapter("SELECT_ROLES", varconexion)
-        Me.DGV_Roles_Disponibles.Rows.Clear()
-        Try
-            varconexion.Open()
-
-            DA_Roles.Fill(ROLES)
-            DGV_Roles_Disponibles.DataSource = ROLES
-            varconexion.Close()
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Sub BTN_Asignar_Click(sender As Object, e As EventArgs) Handles BTN_Asignar.Click
@@ -64,6 +51,32 @@ Public Class Asignacion_Roles
 
             DGV_Roles_Disponibles.Rows.Add(ID, ROL)
             DGV_Roles_Asignados.Rows.RemoveAt(DGV_Roles_Asignados.CurrentRow.Index)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+
+    Private Sub CMB_Usuarios_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CMB_Usuarios.SelectionChangeCommitted
+
+
+
+        'CARGANDO LOS ROLES DISPONIBLES'
+        Dim Usuario As String
+        Usuario = CMB_Usuarios.SelectedValue
+        DGV_Roles_Asignados.Rows.Clear()
+
+        Dim ROLES As New DataTable
+        Dim DA_Roles As New SqlDataAdapter("SELECT_ROLES", varconexion)
+
+        Try
+            varconexion.Open()
+
+            DA_Roles.Fill(ROLES)
+
+            DGV_Roles_Disponibles.DataSource = ROLES
+            varconexion.Close()
         Catch ex As Exception
 
         End Try

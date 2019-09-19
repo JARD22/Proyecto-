@@ -43,3 +43,8 @@ C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Hu
 C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Asignacion_Roles.resources
 C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Crea_Modifica_Rol.resources
 C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Activacion_Usuario.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Pais.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Puestos.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Regiones.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Ascensos.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Empleados.resources

@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -74,10 +89,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionBD.vb" />
+    <Compile Include="Conexion_BD.vb" />
+    <Compile Include="Consultas.vb" />
     <Compile Include="Forms\Activacion_Usuario.Designer.vb">
       <DependentUpon>Activacion_Usuario.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Activacion_Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ascensos.Designer.vb">
+      <DependentUpon>Ascensos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ascensos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Asignacion_Roles.Designer.vb">
@@ -90,6 +113,12 @@
       <DependentUpon>Crea_Modifica_Rol.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Crea_Modifica_Rol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Empleados.Designer.vb">
+      <DependentUpon>Empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Empleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\InicioSesion.vb">
@@ -105,6 +134,25 @@
     <Compile Include="Forms\Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Pais.Designer.vb">
+      <DependentUpon>Pais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Puestos.Designer.vb">
+      <DependentUpon>Puestos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Puestos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regiones.Designer.vb">
+      <DependentUpon>Regiones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regiones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imagen.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -132,17 +180,32 @@
     <EmbeddedResource Include="Forms\Activacion_Usuario.resx">
       <DependentUpon>Activacion_Usuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ascensos.resx">
+      <DependentUpon>Ascensos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Asignacion_Roles.resx">
       <DependentUpon>Asignacion_Roles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Crea_Modifica_Rol.resx">
       <DependentUpon>Crea_Modifica_Rol.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Empleados.resx">
+      <DependentUpon>Empleados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InicioSesion.resx">
       <DependentUpon>InicioSesion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pais.resx">
+      <DependentUpon>Pais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Puestos.resx">
+      <DependentUpon>Puestos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Regiones.resx">
+      <DependentUpon>Regiones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -165,6 +228,18 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
