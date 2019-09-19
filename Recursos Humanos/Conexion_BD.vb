@@ -15,7 +15,7 @@ Public Class Conexion_BD
             Else
                 conn.Open()
                 conectar = True
-                MessageBox.Show("Conexión Exitosa")
+
             End If
         Catch ex As Exception
             conectar = False

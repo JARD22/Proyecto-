@@ -35,6 +35,10 @@ Partial Class Main
         Me.LocalidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PuestosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AscensosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AumentoDeSalarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -43,10 +47,6 @@ Partial Class Main
         Me.BTN_Nuevo = New System.Windows.Forms.ToolStripButton()
         Me.BTN_Guardar = New System.Windows.Forms.ToolStripButton()
         Me.BTN_Eliminar = New System.Windows.Forms.ToolStripButton()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AscensosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AumentoDeSalarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -57,7 +57,7 @@ Partial Class Main
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.ManteniminetoToolStripMenuItem, Me.EmpleadosToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(704, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(784, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -96,46 +96,71 @@ Partial Class Main
         'RegionesToolStripMenuItem
         '
         Me.RegionesToolStripMenuItem.Name = "RegionesToolStripMenuItem"
-        Me.RegionesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegionesToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.RegionesToolStripMenuItem.Text = "Regiones"
         '
         'PaísToolStripMenuItem
         '
         Me.PaísToolStripMenuItem.Name = "PaísToolStripMenuItem"
-        Me.PaísToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PaísToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.PaísToolStripMenuItem.Text = "País"
         '
         'LocalidadesToolStripMenuItem
         '
         Me.LocalidadesToolStripMenuItem.Name = "LocalidadesToolStripMenuItem"
-        Me.LocalidadesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LocalidadesToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.LocalidadesToolStripMenuItem.Text = "Localidades"
         '
         'DepartamentosToolStripMenuItem
         '
         Me.DepartamentosToolStripMenuItem.Name = "DepartamentosToolStripMenuItem"
-        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.DepartamentosToolStripMenuItem.Text = "Departamentos"
         '
         'PuestosToolStripMenuItem
         '
         Me.PuestosToolStripMenuItem.Name = "PuestosToolStripMenuItem"
-        Me.PuestosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PuestosToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.PuestosToolStripMenuItem.Text = "Puestos"
+        '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem, Me.AscensosToolStripMenuItem, Me.AumentoDeSalarioToolStripMenuItem})
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        '
+        'RegistrarToolStripMenuItem
+        '
+        Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.RegistrarToolStripMenuItem.Text = "Registrar"
+        '
+        'AscensosToolStripMenuItem
+        '
+        Me.AscensosToolStripMenuItem.Name = "AscensosToolStripMenuItem"
+        Me.AscensosToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.AscensosToolStripMenuItem.Text = "Ascensos"
+        '
+        'AumentoDeSalarioToolStripMenuItem
+        '
+        Me.AumentoDeSalarioToolStripMenuItem.Name = "AumentoDeSalarioToolStripMenuItem"
+        Me.AumentoDeSalarioToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.AumentoDeSalarioToolStripMenuItem.Text = "Aumento de Salario"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 439)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 727)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(704, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(784, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(613, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(693, 17)
         Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.Text = "Usuario"
         Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -157,7 +182,7 @@ Partial Class Main
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BTN_Nuevo, Me.BTN_Guardar, Me.BTN_Eliminar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(704, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(784, 25)
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -188,36 +213,11 @@ Partial Class Main
         Me.BTN_Eliminar.Size = New System.Drawing.Size(54, 22)
         Me.BTN_Eliminar.Text = "Eliminar"
         '
-        'EmpleadosToolStripMenuItem
-        '
-        Me.EmpleadosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem, Me.AscensosToolStripMenuItem, Me.AumentoDeSalarioToolStripMenuItem})
-        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
-        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
-        '
-        'RegistrarToolStripMenuItem
-        '
-        Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
-        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RegistrarToolStripMenuItem.Text = "Registrar"
-        '
-        'AscensosToolStripMenuItem
-        '
-        Me.AscensosToolStripMenuItem.Name = "AscensosToolStripMenuItem"
-        Me.AscensosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AscensosToolStripMenuItem.Text = "Ascensos"
-        '
-        'AumentoDeSalarioToolStripMenuItem
-        '
-        Me.AumentoDeSalarioToolStripMenuItem.Name = "AumentoDeSalarioToolStripMenuItem"
-        Me.AumentoDeSalarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AumentoDeSalarioToolStripMenuItem.Text = "Aumento de Salario"
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(704, 461)
+        Me.ClientSize = New System.Drawing.Size(784, 749)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)

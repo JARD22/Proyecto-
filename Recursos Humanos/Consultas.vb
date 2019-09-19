@@ -11,7 +11,7 @@ Module Consultas
                                 Telefono As String, Puesto As String,
                                 Imagen As PictureBox)
         Try
-            MessageBox.Show(Puesto)
+
 
             Dim Imag As String
             'Convertimos la imagen a Bytes '
@@ -38,10 +38,17 @@ Module Consultas
 
 
     Public Sub Carga_Empleados()
+        Dim Emple As New DataTable
+        Dim DA As New SqlDataAdapter("CARGA_EMPLEADOS", Conexion_BD.conn)
+
         Try
+            Conexion_BD.Open()
+            DA.Fill(Emple)
+            Empleados.DGV_Empleados.DataSource = Emple
+            Conexion_BD.Close()
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -58,7 +65,7 @@ Module Consultas
 
         Try
             Conexion_BD.Open()
-            Dim Guarda_Rol = New SqlClient.SqlCommand("GUARDA_ROL " & ID & ",'" & Descripcion & "'", varconexion)
+            Dim Guarda_Rol = New SqlClient.SqlCommand("GUARDA_ROL " & ID & ",'" & Descripcion & "'", Conexion_BD.conn)
             Guarda_Rol.ExecuteNonQuery()
             Conexion_BD.Close()
             MessageBox.Show("Rol Guardado")
@@ -91,20 +98,20 @@ Module Consultas
         Dim Rol_ID_Max As Int32
 
         ''Obtenemos el Ultimo ID del rol en la base'
-        Dim ROLMAX As New SqlClient.SqlCommand("SP_ULTIMO_ID_ROL", varconexion)
+        Dim ROLMAX As New SqlClient.SqlCommand("SP_ULTIMO_ID_ROL", Conexion_BD.conn)
 
         Dim DataReader As SqlClient.SqlDataReader
 
         'Obteniedo los valores de la Consulta'
         Try
 
-            varconexion.Open()
+            Conexion_BD.Open()
             DataReader = ROLMAX.ExecuteReader
 
             While DataReader.Read()
                 Rol_ID_Max = DataReader.GetInt32(0)
             End While
-            varconexion.Close()
+            Conexion_BD.Close()
 
             Crea_Modifica_Rol.Txt_RolID.Text = Convert.ToString((Rol_ID_Max + 1))
 
@@ -116,7 +123,7 @@ Module Consultas
     Public Sub CargaRoles()
         Dim Empleados As New DataTable
         Dim DA As New SqlDataAdapter("SELECT_ROLES", Conexion_BD.conn)
-        Dim nuevousuario As New SqlClient.SqlCommand
+      
 
 
         Try

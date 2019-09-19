@@ -15,11 +15,11 @@
         Dim intentosblanco As Integer = 0
 
 
-        Dim Query As New SqlClient.SqlCommand("SELECT Usuario, Contraseña, Estado FROM USUARIOS WHERE Usuario= '" & Txt_Usuario.Text & "'", Conexion_BD.conn)
+        Dim Query As New SqlClient.SqlCommand("INICIO_SESION '" & Txt_Usuario.Text & "'", Conexion_BD.conn)
         Dim dr As SqlClient.SqlDataReader
 
 
-        Dim Update As New SqlClient.SqlCommand
+
 
 
 
@@ -71,10 +71,12 @@
 
         'DESACTIVANDO USUARIO Y BOTON DE LA FORMA
 
+        Dim Update As New SqlClient.SqlCommand
+
         If numero_intentos = 3 Then
             Try
                 Conexion_BD.Open()
-                Update = New SqlClient.SqlCommand("  UPDATE  USUARIOS SET Estado = 'Desactivad' WHERE Usuario ='" + Usuario + "'", varconexion)
+                Update = New SqlClient.SqlCommand("SP_ESTADO '" + Usuario + "'", Conexion_BD.conn)
                 Update.ExecuteNonQuery()
 
                 MessageBox.Show("Usuario desactivado, contacte con el administrador")
