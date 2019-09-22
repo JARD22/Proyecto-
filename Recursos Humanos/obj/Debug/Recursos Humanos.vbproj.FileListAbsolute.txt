@@ -48,3 +48,7 @@ C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Hu
 C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Regiones.resources
 C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Ascensos.resources
 C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Empleados.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.MDI.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Localidades.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Aumento_Salario.resources
+C:\Users\jorge\OneDrive\Documentos\Carrera\Programación IV\Proyecto\Recursos Humanos\Recursos Humanos\obj\Debug\Recursos_Humanos.Departamentos.resources

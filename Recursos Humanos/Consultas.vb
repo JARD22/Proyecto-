@@ -6,6 +6,169 @@ Imports System.IO
 Module Consultas
 
 
+    Public Sub GuardaLocalidad(ID As Integer, Ciudad As String, Direccion As String, Departamento As String, Pais As String)
+        Dim Query As New SqlClient.SqlCommand("SP_GUARDA_LOCALIDAD " & ID & ",'" & Ciudad & "','" & Direccion & "','" & Departamento & "','" & Pais & "'", Conexion_BD.conn)
+        Try
+            Conexion_BD.Open()
+            Query.ExecuteNonQuery()
+            Conexion_BD.Close()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Public Sub Paises(CMB As ComboBox)
+        Dim Query As New SqlClient.SqlCommand("SP_PAISES", Conexion_BD.conn)
+        Dim Paises As DataTable
+        Dim Data As New SqlClient.SqlDataAdapter(Query)
+        Paises = New DataTable
+
+        Try
+            Conexion_BD.Open()
+            Data.Fill(Paises)
+            CMB.DataSource = Paises
+            CMB.ValueMember = "Nombre"
+            Conexion_BD.Close()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
+    Public Sub Carga_Localidades(DGV As DataGridView)
+
+        Dim Query As New SqlClient.SqlCommand("SP_CARGA_LOCALIDADES", Conexion_BD.conn)
+        Dim Localidades As DataTable
+        Dim Data As New SqlClient.SqlDataAdapter(Query)
+        Localidades = New DataTable
+        Try
+            Conexion_BD.Open()
+            Data.Fill(Localidades)
+            DGV.DataSource = Localidades
+            Conexion_BD.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+
+    Public Sub GuardaDepto(Nombre As String, Jefe As Integer, Localidad As String)
+        Dim Query As New SqlClient.SqlCommand("SP_GUARDA_DEPARTAMENTO '" & Nombre & "'," & Jefe & ",'" & Localidad & "'", Conexion_BD.conn)
+
+        Try
+            Conexion_BD.Open()
+            Query.ExecuteNonQuery()
+            Conexion_BD.Close()
+            MessageBox.Show("Departamento Guardado")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+    End Sub
+
+    Public Sub CargaDepartamento(DGV As DataGridView, CMB As ComboBox)
+        Dim Query As New SqlClient.SqlCommand("SP_CARGA_DEPARTAMENTOS", Conexion_BD.conn)
+        Dim Departamentos As DataTable
+        Dim Data As New SqlClient.SqlDataAdapter(Query)
+        Departamentos = New DataTable
+        Try
+            Conexion_BD.Open()
+
+            Data.Fill(Departamentos)
+            'Cargamos el DGV y el ComboBox'
+            DGV.DataSource = Departamentos
+            CMB.DataSource = Departamentos
+            CMB.DisplayMember = "Localidad"
+
+            Conexion_BD.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+
+
+    Public Sub Aumento_Slr(ID As Integer, Salario As Double, Puesto As String)
+
+        Dim Query As New SqlClient.SqlCommand("SP_AUMENTO_SALARIO " & ID & "," & Salario & ",'" & Puesto & "'", Conexion_BD.conn)
+
+        Try
+            Conexion_BD.Open()
+            Query.ExecuteNonQuery()
+            Conexion_BD.Close()
+            MessageBox.Show("Aumento Registrado")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+
+
+
+    Public Sub NuevoPuesto(ID As Integer, Puesto As String, Salario As Double)
+        Dim Query As New SqlClient.SqlCommand("SP_NUEVO_PUESTO " & ID & ",'" & Puesto & "'," & Salario & "", Conexion_BD.conn)
+
+        Try
+            Conexion_BD.Open()
+            Query.ExecuteNonQuery()
+            Conexion_BD.Close()
+            MessageBox.Show("Ascenso Registrado")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+    End Sub
+
+
+    Public Sub cargaCMBDepartamentos(CmbDepartamentos As ComboBox)
+        Dim Departamentos As DataTable
+        Dim Query As New SqlClient.SqlCommand("SP_CMB_DEPARTAMENTOS", Conexion_BD.conn)
+        Dim Data As New SqlClient.SqlDataAdapter(Query)
+        Departamentos = New DataTable
+        Try
+            Conexion_BD.Open()
+
+            Data.Fill(Departamentos)
+            CmbDepartamentos.DataSource = Departamentos
+            CmbDepartamentos.DisplayMember = "Nombre"
+            CmbDepartamentos.ValueMember = "Departamento_ID"
+            Conexion_BD.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+    End Sub
+
+
+
+    Public Sub cargaCMBPuestos(CmbPuestos As ComboBox)
+        Dim Puestos As DataTable
+        Dim Query As New SqlClient.SqlCommand("SP_CMB_Puestos", Conexion_BD.conn)
+        Dim Data As New SqlClient.SqlDataAdapter(Query)
+        Puestos = New DataTable
+        Try
+            Conexion_BD.Open()
+
+            Data.Fill(Puestos)
+            CmbPuestos.DataSource = Puestos
+            CmbPuestos.DisplayMember = "Titulo"
+            CmbPuestos.ValueMember = "Puesto_ID"
+            Conexion_BD.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+    End Sub
+
+    Public Sub CargaCMBDepartamentos()
+
+    End Sub
 
     Public Sub Guardar_Empleado(ID As Integer, Nombre As String, Apellido As String, Identidad As String, Salario As Double, Correo As String,
                                 Telefono As String, Puesto As String,
@@ -37,14 +200,14 @@ Module Consultas
 
 
 
-    Public Sub Carga_Empleados()
+    Public Sub Carga_Empleados(DGV As DataGridView)
         Dim Emple As New DataTable
         Dim DA As New SqlDataAdapter("CARGA_EMPLEADOS", Conexion_BD.conn)
 
         Try
             Conexion_BD.Open()
             DA.Fill(Emple)
-            Empleados.DGV_Empleados.DataSource = Emple
+            DGV.DataSource = Emple
             Conexion_BD.Close()
 
         Catch ex As Exception
@@ -123,7 +286,7 @@ Module Consultas
     Public Sub CargaRoles()
         Dim Empleados As New DataTable
         Dim DA As New SqlDataAdapter("SELECT_ROLES", Conexion_BD.conn)
-      
+
 
 
         Try

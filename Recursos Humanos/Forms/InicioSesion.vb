@@ -62,7 +62,7 @@
 
         'COMPARANDO PASSWORD DESENCRIPTADO Y USUARIO
         If Desencriptar(Pass) = Txt_Password.Text And Usuario = Txt_Usuario.Text Then
-            Main.Show()
+            MDI.Show()
             Me.Hide()
         Else
             Lbl_Notificacion.Text = "Usuario o contraseña incorrectos"
@@ -91,7 +91,7 @@
         End If
 
         'COLOCANDO EL NOMBRE DE USUARIO EN EL TOOLSTRIPSTATUSLABEL'
-        Main.ToolStripStatusLabel1.Text = Usuario
+        MDI.ToolStripStatusLabel1.Text = Usuario
 
 
 

@@ -8,17 +8,17 @@ Public Class Activacion_Usuario
 
 
         Dim Usuarios As New DataTable
-        Dim DA_Usuarios As New SqlDataAdapter("SP_ESTADO_USUARIOS", varconexion)
+        Dim DA_Usuarios As New SqlDataAdapter("SP_ESTADO_USUARIOS", Conexion_BD.conn)
         Dim nuevousuario As New SqlClient.SqlCommand
 
         Me.DGV_Usuarios.Rows.Clear()
 
         Try
-            varconexion.Open()
+            Conexion_BD.Open()
 
             DA_Usuarios.Fill(Usuarios)
             DGV_Usuarios.DataSource = Usuarios
-            varconexion.Close()
+            Conexion_BD.Close()
         Catch ex As Exception
 
         End Try
@@ -50,10 +50,10 @@ Public Class Activacion_Usuario
 
         If CMB_Estado.Text = "Desactivado" Then
             Try
-                varconexion.Open()
-                Dim Update_Estado = New SqlClient.SqlCommand("SP_ACTUALIZAR_ESTADO " & ID_Usuario & ",'Desactivado'", varconexion)
+                Conexion_BD.Open()
+                Dim Update_Estado = New SqlClient.SqlCommand("SP_ACTUALIZAR_ESTADO " & ID_Usuario & ",'Desactivado'", Conexion_BD.conn)
                 Update_Estado.ExecuteNonQuery()
-                varconexion.Close()
+                Conexion_BD.Close()
                 MessageBox.Show("Usuario Actualizado")
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -63,7 +63,7 @@ Public Class Activacion_Usuario
         End If
 
         Dim Usuarios As New DataTable
-        Dim DA_Usuarios As New SqlDataAdapter("SP_ESTADO_USUARIOS", varconexion)
+        Dim DA_Usuarios As New SqlDataAdapter("SP_ESTADO_USUARIOS", Conexion_BD.conn)
         Dim nuevousuario As New SqlClient.SqlCommand
 
 
@@ -71,11 +71,11 @@ Public Class Activacion_Usuario
         'RECARGANDO EL DATAGRID'
 
         Try
-            varconexion.Open()
+            Conexion_BD.Open()
 
             DA_Usuarios.Fill(Usuarios)
             DGV_Usuarios.DataSource = Usuarios
-            varconexion.Close()
+            Conexion_BD.Close()
         Catch ex As Exception
 
         End Try

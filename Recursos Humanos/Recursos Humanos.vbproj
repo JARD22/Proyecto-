@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{745511F5-4A35-4576-9827-8F75975A85B3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Recursos_Humanos.My.MyApplication</StartupObject>
+    <StartupObject>Recursos_Humanos.MDI</StartupObject>
     <RootNamespace>Recursos_Humanos</RootNamespace>
     <AssemblyName>Recursos Humanos</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -111,10 +111,28 @@
     <Compile Include="Forms\Asignacion_Roles.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Aumento_Salario.Designer.vb">
+      <DependentUpon>Aumento_Salario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Aumento_Salario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Crea_Modifica_Rol.Designer.vb">
       <DependentUpon>Crea_Modifica_Rol.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\Crea_Modifica_Rol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Departamentos.Designer.vb">
+      <DependentUpon>Departamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Departamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Localidades.Designer.vb">
+      <DependentUpon>Localidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Localidades.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Empleados.Designer.vb">
@@ -130,10 +148,10 @@
       <DependentUpon>InicioSesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Main.Designer.vb">
-      <DependentUpon>Main.vb</DependentUpon>
+    <Compile Include="Forms\MDI.Designer.vb">
+      <DependentUpon>MDI.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main.vb">
+    <Compile Include="Forms\MDI.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Pais.Designer.vb">
@@ -188,8 +206,17 @@
     <EmbeddedResource Include="Forms\Asignacion_Roles.resx">
       <DependentUpon>Asignacion_Roles.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Aumento_Salario.resx">
+      <DependentUpon>Aumento_Salario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Crea_Modifica_Rol.resx">
       <DependentUpon>Crea_Modifica_Rol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Departamentos.resx">
+      <DependentUpon>Departamentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Localidades.resx">
+      <DependentUpon>Localidades.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Empleados.resx">
       <DependentUpon>Empleados.vb</DependentUpon>
@@ -197,8 +224,8 @@
     <EmbeddedResource Include="Forms\InicioSesion.resx">
       <DependentUpon>InicioSesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Main.resx">
-      <DependentUpon>Main.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\MDI.resx">
+      <DependentUpon>MDI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Pais.resx">
       <DependentUpon>Pais.vb</DependentUpon>

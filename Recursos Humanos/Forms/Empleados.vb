@@ -5,6 +5,6 @@
     End Sub
 
     Private Sub Empleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Carga_Empleados()
+        Carga_Empleados(DGV_Empleados)
     End Sub
 End Class

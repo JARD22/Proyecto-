@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Main
+Partial Class MDI
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,7 +23,7 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MDI))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AsignarRolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -114,7 +114,7 @@ Partial Class Main
         'DepartamentosToolStripMenuItem
         '
         Me.DepartamentosToolStripMenuItem.Name = "DepartamentosToolStripMenuItem"
-        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentosToolStripMenuItem.Text = "Departamentos"
         '
         'PuestosToolStripMenuItem
@@ -133,25 +133,25 @@ Partial Class Main
         'RegistrarToolStripMenuItem
         '
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
-        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
         '
         'AscensosToolStripMenuItem
         '
         Me.AscensosToolStripMenuItem.Name = "AscensosToolStripMenuItem"
-        Me.AscensosToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.AscensosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AscensosToolStripMenuItem.Text = "Ascensos"
         '
         'AumentoDeSalarioToolStripMenuItem
         '
         Me.AumentoDeSalarioToolStripMenuItem.Name = "AumentoDeSalarioToolStripMenuItem"
-        Me.AumentoDeSalarioToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.AumentoDeSalarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AumentoDeSalarioToolStripMenuItem.Text = "Aumento de Salario"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 727)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 639)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(784, 22)
         Me.StatusStrip1.TabIndex = 2
@@ -213,18 +213,18 @@ Partial Class Main
         Me.BTN_Eliminar.Size = New System.Drawing.Size(54, 22)
         Me.BTN_Eliminar.Text = "Eliminar"
         '
-        'Main
+        'MDI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 749)
+        Me.ClientSize = New System.Drawing.Size(784, 661)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.Name = "Main"
+        Me.Name = "MDI"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Main"
         Me.MenuStrip1.ResumeLayout(False)

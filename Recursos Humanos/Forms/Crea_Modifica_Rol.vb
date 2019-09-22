@@ -7,16 +7,16 @@ Public Class Crea_Modifica_Rol
 
     Private Sub RegistroUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim Empleados As New DataTable
-        Dim DA As New SqlDataAdapter("SELECT_ROLES", varconexion)
+        Dim DA As New SqlDataAdapter("SELECT_ROLES", Conexion_BD.conn)
         Dim nuevousuario As New SqlClient.SqlCommand
         Me.DGV_ROLES.Rows.Clear()
 
         Try
-            varconexion.Open()
+            Conexion_BD.Open()
 
             DA.Fill(Empleados)
             DGV_ROLES.DataSource = Empleados
-            varconexion.Close()
+            Conexion_BD.Close()
         Catch ex As Exception
 
         End Try

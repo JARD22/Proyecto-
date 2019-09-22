@@ -12,4 +12,8 @@
         Txt_SMinimo.Text = DGV_Puestos.Item(2, i).Value
         Txt_SMaximo.Text = DGV_Puestos.Item(3, i).Value
     End Sub
+
+    Private Sub DGV_Puestos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Puestos.CellContentClick
+
+    End Sub
 End Class

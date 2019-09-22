@@ -4,18 +4,18 @@ Imports System.Data.SqlClient
 Imports System.IO
 Public Class RegistroUsuario
     Public Empleados As New DataTable
-    Public DA As New SqlDataAdapter("SELECT Empleado_ID, Primer_Nombre, Primer_Apellido FROM EMPLEADOS", varconexion)
+    Public DA As New SqlDataAdapter("SELECT Empleado_ID, Primer_Nombre, Primer_Apellido FROM EMPLEADOS", Conexion_BD.conn)
     Public nuevousuario As New SqlClient.SqlCommand
     Private Sub RegistroUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.DGV_Empleados.Rows.Clear()
 
         Try
-            varconexion.Open()
+            Conexion_BD.Open()
 
             DA.Fill(Empleados)
             DGV_Empleados.DataSource = Empleados
-            varconexion.Close()
+            Conexion_BD.Close()
         Catch ex As Exception
 
         End Try
@@ -47,10 +47,10 @@ Public Class RegistroUsuario
         End If
 
         If Pass = ConfPass Then
-            varconexion.Open()
-            nuevousuario = New SqlClient.SqlCommand("INSERT INTO USUARIOS (Usuario, Fecha_Contrato, Empleado_ID, Estado, Contraseña) VALUES ('" + Txt_Usuario.Text + "',GETDATE()" + ",'" + Lbl_IDemp.Text + "','" + "Activo','" + passencript + "')", varconexion)
+            Conexion_BD.Open()
+            nuevousuario = New SqlClient.SqlCommand("INSERT INTO USUARIOS (Usuario, Fecha_Contrato, Empleado_ID, Estado, Contraseña) VALUES ('" + Txt_Usuario.Text + "',GETDATE()" + ",'" + Lbl_IDemp.Text + "','" + "Activo','" + passencript + "')", Conexion_BD.conn)
             nuevousuario.ExecuteNonQuery()
-            varconexion.Close()
+            Conexion_BD.Close()
             MessageBox.Show("Usuario Creado Exitosamente")
         Else
             MessageBox.Show("Las contrase;as no coinciden")

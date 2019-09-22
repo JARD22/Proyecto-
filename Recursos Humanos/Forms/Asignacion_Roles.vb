@@ -9,16 +9,16 @@ Public Class Asignacion_Roles
         'CARGANDO EL COMBOBOX CON LOS USUARIOS'
         Try
 
-            varconexion.Open()
+            Conexion_BD.Open()
             Dim Usuarios As New DataTable
             'Dim DA_Usuarios As New SqlClient.SqlCommand("SELECT_USUARIO", varconexion)
-            Dim DA_Usuarios As New SqlClient.SqlDataAdapter("SELECT_USUARIO", varconexion)
+            Dim DA_Usuarios As New SqlClient.SqlDataAdapter("SELECT_USUARIO", Conexion_BD.conn)
 
             DA_Usuarios.Fill(Usuarios)
             CMB_Usuarios.DataSource = Usuarios
             'CMB_Usuarios.DisplayMember = "Usuarios"
             CMB_Usuarios.ValueMember = "Usuario"
-            varconexion.Close()
+            Conexion_BD.Close()
         Catch ex As Exception
 
         End Try
@@ -68,15 +68,15 @@ Public Class Asignacion_Roles
         DGV_Roles_Asignados.Rows.Clear()
 
         Dim ROLES As New DataTable
-        Dim DA_Roles As New SqlDataAdapter("SELECT_ROLES", varconexion)
+        Dim DA_Roles As New SqlDataAdapter("SELECT_ROLES", Conexion_BD.conn)
 
         Try
-            varconexion.Open()
+            Conexion_BD.Open()
 
             DA_Roles.Fill(ROLES)
 
             DGV_Roles_Disponibles.DataSource = ROLES
-            varconexion.Close()
+            Conexion_BD.Close()
         Catch ex As Exception
 
         End Try
